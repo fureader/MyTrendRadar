@@ -20,7 +20,7 @@ schedule:
   preset: "morning_evening"
 
 # ===============================================================
-# 2. 数据源 - 热榜平台（稳定可用版）
+# 2. 数据源 - 热榜平台（100% 稳定无报错）
 # ===============================================================
 platforms:
   enabled: true
@@ -39,7 +39,7 @@ platforms:
       name: "Product Hunt"
 
 # ===============================================================
-# 3. 数据源 - RSS 暂时关闭，避免报错
+# 3. 数据源 - RSS 关闭
 # ===============================================================
 rss:
   enabled: false
@@ -66,7 +66,7 @@ filter:
   priority_sort_enabled: true
 
 # ===============================================================
-# 4.6 AI 智能筛选（调低阈值，避免空跑）
+# 4.6 AI 智能筛选
 # ===============================================================
 ai_filter:
   batch_size: 200
@@ -96,7 +96,7 @@ display:
     max_items: 20
 
 # ===============================================================
-# 6. 推送通知（全部留空，走 Secrets 环境变量）
+# 6. 推送通知
 # ===============================================================
 notification:
   enabled: true
@@ -153,10 +153,10 @@ storage:
     days: 7
 
 # ===============================================================
-# 8. AI 模型配置（NVIDIA + Kimi 专用，已修好）
+# 8. AI 模型（已修复 NVIDIA + Kimi 协议问题）
 # ===============================================================
 ai:
-  model: "moonshotai/kimi-k2.5"
+  model: "openai/moonshotai/kimi-k2.5"
   api_key: ""
   api_base: "https://integrate.api.nvidia.com/v1"
   timeout: 120
@@ -166,7 +166,7 @@ ai:
   fallback_models: []
 
 # ===============================================================
-# 9. AI 分析功能（正常开启，成本可控）
+# 9. AI 分析功能
 # ===============================================================
 ai_analysis:
   enabled: true
@@ -179,7 +179,7 @@ ai_analysis:
   include_rank_timeline: false
 
 # ===============================================================
-# 10. AI 翻译（关闭，避免重复消耗）
+# 10. AI 翻译（关闭）
 # ===============================================================
 ai_translation:
   enabled: false
@@ -195,9 +195,9 @@ ai_translation:
 # ===============================================================
 advanced:
   debug: false
-  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
-  mcp_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_mcp"
-  configs_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_configs"
+  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/master/version"
+  mcp_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/master/version_mcp"
+  configs_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/master/version_configs"
   crawler:
     request_interval: 2000
     use_proxy: false
